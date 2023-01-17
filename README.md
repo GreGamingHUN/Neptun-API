@@ -93,6 +93,8 @@ Időszak objektumokat ad vissza a következő adattagokkal:
 
 ## GetAddedSubjects
 - **Adattag**: AddedSubjectsList
+
+[//]: # (endoflist)
 Plusz adattag amit a POST requesthez kell adni:
 - **TermId**: A szemeszter id-je, amit a **GetPeriodTerms** segítségével kérhetsz le
 
