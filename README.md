@@ -49,7 +49,7 @@ Itt az összes endpoint amit találtam:
 - **SendDate**: Üzenet küldési ideje epoch timestamp formátumban (konvertáláshoz link: https://www.epochconverter.com/)
 - **Subject**: Az üzenet témája/címe
 
-##GetSentMessages
+## GetSentMessages
 - **Adattag**: MessagesList
 Mivel életemben nem küldtem egy neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen
 Probalby ugyanaz, mint a GetMessages
