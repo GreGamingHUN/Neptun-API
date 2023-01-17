@@ -52,7 +52,7 @@ Itt az összes endpoint amit találtam:
 - **Id**: Az üzenet id-je
 - **IsNew**: i have no idea
 - **Name**: Küldő
-- **NeptunCode**: i have no idea, mindig üres string-et ad
+- **NeptunCode**: i have no idea, mindig üres stringet ad
 - **PersonMessageId**: i have no idea
 - **SendDate**: Üzenet küldési ideje epoch timestamp formátumban
 - **Subject**: Az üzenet témája/címe
@@ -67,9 +67,44 @@ Itt az összes endpoint amit találtam:
 - **Adattag**: PeriodTermsList
 
 [//]: # (endoflist)
-  Időszak objektumokat ad vissza a következő adattagokkal:
+    Szemeszter objektumokat ad vissza a következő adattagokkal:
 - **Id**: A félév id-je
 - **TermName**: A félév megnevezése
+
+## GetPeriods
+- **Adattag**: PeriodList
+
+[//]: # (endoflist)
+Plusz adattag amit a POST requesthez kell adni:
+- **PeriodTermID**: A szemeszter id-je, amit a **GetPeriodTerms** segítségével kérhetsz le
+
+
+[//]: # (endoflist)
+Időszak objektumokat ad vissza a következő adattagokkal:
+- **FromDate**: Mikortól kezdődik az időszak
+- **OrgAdmins**: i have no idea, mindig öres stringet ad
+- **PeriodName**: Időszak neve
+- **ToDate**: Meddig tart az időszak
+- **TrainingTermIntervalId**: i have no idea, valószínűleg szimplán az időszak id-je
+
+## GetAddedSubjects
+- **Adattag**: AddedSubjectsList
+Plusz adattag amit a POST requesthez kell adni:
+- **TermId**: A szemeszter id-je, amit a **GetPeriodTerms** segítségével kérhetsz le
+
+[//]: # (endoflist)
+Tárgy objektumokat ad vissza a következő adattagokkal?
+- **Courses**: Egy tömb, amiben a kurzusok adatai találhatók, még nem tudom hogyan kell használni
+- **CurriculumtemplateID**: A tanterv id-je, amiben benne van
+- **SubjectCode**: A tárgy kódja
+- **SubjectComplianceResult**: A tárgy eredménye. Üres string, ha nincs jegy, ha akkor string, pl: ```"Jó (4)", "Közepes (3)"``` 
+- **SubjectComplianceResultType**: i have no idea
+- **SubjectCredit**: A tárgy kreditértéke
+- **SubjectID**: A tárgy id-je
+- **SubjectName**: A tárgy neve
+- **SubjectRequirement**: A tárgy követelménye(?), pl ```"Kollokvium", "Gyakorlati jegy"```
+- **SubjectType**: A tárgy típusa, pl ```"Kötelező", "Kötelezően választható", "Szabadon választható"```
+- **TermId**: A félév id-je (fogalmam sincs miért adja vissza, amikor azt nekünk kellett megadni)
 
 ## Dokumentálatlan endpoint-ok
 - GetPartners
@@ -88,10 +123,8 @@ Itt az összes endpoint amit találtam:
 - RemoveMessage
 - RemoveSentMessage
 - SendMessage
-- GetPeriods
 - GetSubjects
 - GetMarkbookData
-- GetAddedSubjects
 - GetTrainings
 - GetExams
 - GetExamDetails
