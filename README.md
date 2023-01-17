@@ -51,11 +51,13 @@ Itt az összes endpoint amit találtam:
 
 ## GetSentMessages
 - **Adattag**: MessagesList
-Mivel életemben nem küldtem egy neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen
-Probalby ugyanaz, mint a GetMessages
+
+[//]: # (endoflist)
+    Mivel életemben nem küldtem egy neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen, probalby ugyanaz, mint a GetMessages
 
 ## GetPeriodTerms
 - **Adattag**: PeriodTermsList
+
 [//]: # (endoflist)
   Szemeszter objektumokat ad vissza a következő adattagokkal:
 - **Id**: A félév id-je
