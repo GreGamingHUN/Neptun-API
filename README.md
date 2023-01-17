@@ -15,7 +15,7 @@ Az endpoint-okat a linkek végére kell írni. A végeredmény:<br>
 
 Minden HTTP request-et POST-ként kell küldeni. Ha egyéb dolgot nem ír, akkor ezt a default query-t kell küldeni:
 
-```
+```json
 {
     "TotalRowCount": -1,
     "ExceptionsEnum": 0,
