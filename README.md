@@ -7,7 +7,7 @@ Néha ha valamivel haladok Twitterre kiposztolom, ha érdekel ahogy szenvedek ch
 
 Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmazásból lett *kimókolva*.
 
-- A projekt elkezdésében sokat segített @RuzsaGergely Poszeidon proxy-ja: https://github.com/RuzsaGergely/Poszeidon (thanks pal)
+- A projekt elkezdésében sokat segített @RuzsaGergely valamint a Poszeidon proxy-ja: https://github.com/RuzsaGergely/Poszeidon (thanks pal)
 
 Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket egyelőre megtalálod a repo-ban lévő GetInstitues.json-ból.
 
