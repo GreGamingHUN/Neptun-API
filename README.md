@@ -99,7 +99,7 @@ Plusz adattag amit a POST requesthez kell adni:
 - **TermId**: A szemeszter id-je, amit a **GetPeriodTerms** segítségével kérhetsz le
 
 [//]: # (endoflist)
-Tárgy objektumokat ad vissza a következő adattagokkal?
+Tárgy objektumokat ad vissza a következő adattagokkal:
 - **Courses**: Egy tömb, amiben a kurzusok adatai találhatók, még nem tudom hogyan kell használni
 - **CurriculumtemplateID**: A tanterv id-je, amiben benne van
 - **SubjectCode**: A tárgy kódja
