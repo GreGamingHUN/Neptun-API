@@ -67,7 +67,7 @@ Itt az összes endpoint amit találtam:
 - **Adattag**: PeriodTermsList
 
 [//]: # (endoflist)
-  Szemeszter objektumokat ad vissza a következő adattagokkal:
+  Időszak objektumokat ad vissza a következő adattagokkal:
 - **Id**: A félév id-je
 - **TermName**: A félév megnevezése
 
