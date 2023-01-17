@@ -3,9 +3,13 @@ A Neptun Egyetemi Rendszer API dokumentációja
 
 A dokumentáció rendszeres frissítés alatt van, ahogy haladok az endpointok tesztelésében úgy frissítem.
 
+Néha ha valamivel haladok Twitterre kiposztolom, ha érdekel ahogy szenvedek check it out: https://twitter.com/GreG_Coding
+
 Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmazásból lett *kimókolva*.
 
-Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket megtalálod a repo-ban lévő GetInstitues.json-ból.
+- A projekt elkezdésében sokat segített @RuzsaGergely Poszeidon proxy-ja: https://github.com/RuzsaGergely/Poszeidon (thanks pal)
+
+Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket egyelőre megtalálod a repo-ban lévő GetInstitues.json-ból.
 
 A link így néz ki: <br>
 ```https://<neptun-link>/<hallgato-api>/MobileService.msc/```
