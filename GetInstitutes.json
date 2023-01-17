@@ -1,0 +1,394 @@
+[
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "A Tan Kapuja Buddhista Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI62370",
+        "Url": "https://host.sdakft.hu/tkbfhw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Állatorvostudományi Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI21261",
+        "Url": "https://neptun.univet.hu/ate_hw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Apor Vilmos Katolikus Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI21962",
+        "Url": null
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Bhaktivedanta Hittudományi Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI21010",
+        "Url": "https://host.sdakft.hu/bhfhw/MobileService.svc"
+    },
+    {
+        "Languages": "HU",
+        "Name": "Brenner János Hittudományi Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI83335",
+        "Url": "https://host.sdakft.hu/bjhfhw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Budapesti Corvinus Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI43814",
+        "Url": "https://neptun3r.web.uni-corvinus.hu/Hallgatoi/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE,FR",
+        "Name": "Budapesti Gazdasági Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI82314",
+        "Url": "https://neptun16.uni-bge.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Budapesti Metropolitan Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI33842",
+        "Url": "https://neptunweb2.metropolitan.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE,FR",
+        "Name": "Budapesti Műszaki és Gazdaságtudományi Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI23344",
+        "Url": "https://neptun.bme.hu/hallgatoi/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Debreceni Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI17198",
+        "Url": "https://www-h.neptun.unideb.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Debreceni Református Hittudományi Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI12746",
+        "Url": "https://host.sdakft.hu/drhehw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "DEV12C",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "XX123456",
+        "Url": "https://nts2012.sdainformatika.hu/dev12c_hw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Dunaújvárosi Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI60345",
+        "Url": "https://nappw.dfad.duf.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Edutus Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI83139",
+        "Url": "https://neptun1.edutus.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Eötvös József Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI51105",
+        "Url": "https://neptun.ejf.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Eötvös Loránd Tudományegyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI80798",
+        "Url": "https://hallgato2.neptun.elte.hu/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Eszterházy Károly Katolikus Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI10955",
+        "Url": "https://neptunh.uni-eszterhazy.hu/Hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Gábor Dénes Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI54333",
+        "Url": "https://neptun.gdf.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Gál Ferenc Egyetem ",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI18580",
+        "Url": "https://host.sdakft.hu/gfehw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE,RO,FR",
+        "Name": "Gyakorló Egyetem ",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "125638",
+        "Url": "https://demo.neptun.org.hu/dhthw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "IBS Nemzetközi Üzleti Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI35200",
+        "Url": "https://neptun.ibs-b.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Kaposvári Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI72153",
+        "Url": null
+    },
+    {
+        "Languages": "HU,EN,DE,RO",
+        "Name": "Károli Gáspár Református Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI44189",
+        "Url": "https://neptun.kre.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Károly Róbert Főiskola, Gyöngyös",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI73428",
+        "Url": null
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Kodolányi János Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI29432",
+        "Url": "https://neptun.kodolanyi.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Liszt Ferenc Zeneművészeti Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI26840",
+        "Url": "https://neptun.lfze.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Magyar Agrár- és Élettudományi Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI51129",
+        "Url": "https://web03.neptun.uni-mate.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Magyar Képzőművészeti Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI27524",
+        "Url": "https://mke-neptun.mke.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Magyar Táncművészeti Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI41559",
+        "Url": "https://host.sdakft.hu/mtfhw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Milton Friedman Egyetem ",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI83995",
+        "Url": "https://neptun.uni-milton.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Miskolci Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI87515",
+        "Url": "https://neptun33.uni-miskolc.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Moholy-Nagy Művészeti Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI73435",
+        "Url": "https://host.sdakft.hu/momehw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Nemzeti Közszolgálati Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI99859",
+        "Url": "https://neptunweb.uni-nke.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN",
+        "Name": "Neumann János Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI96377",
+        "Url": null
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Nyíregyházi Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI74250",
+        "Url": "https://neptunwebv1.nyf.hu/hallgatoi/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Óbudai Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI12904",
+        "Url": "https://neptun.uni-obuda.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Országos Rabbiképző - Zsidó Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI17624",
+        "Url": "https://neptun.or-zse.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Pannon Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI80554",
+        "Url": "https://neptun-ws03.uni-pannon.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE,FR",
+        "Name": "Pázmány Péter Katolikus Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI79633",
+        "Url": "https://neptun3.ppke.hu/hallgato3/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Pécsi Tudományegyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI58544",
+        "Url": "https://neptun-web3.tr.pte.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,RO,EN",
+        "Name": "Sapientia Erdélyi Magyar Tudományegyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "SEMTE",
+        "Url": "https://host.sdakft.hu/semtehw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Sapientia Szerzetesi Hittudományi Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI47939",
+        "Url": "https://neptun3r.sapientia.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE,SK,IT",
+        "Name": "Semmelweis Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI62576",
+        "Url": "https://neptunweb.semmelweis.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Soproni Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI21120",
+        "Url": "https://neptun3r.uni-sopron.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Széchenyi István Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI38696",
+        "Url": "https://netw8.nnet.sze.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Szegedi Tudományegyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI62198",
+        "Url": "https://neptun.szte.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Szent Atanáz Görög Katolikus Hittudományi Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI35925",
+        "Url": "https://neptun.szentatanaz.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Szent István Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI69207",
+        "Url": null
+    },
+    {
+        "Languages": "HU,EN,SK",
+        "Name": "Szent Pál Akadémia",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI67069",
+        "Url": "https://neptun.szpa.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Színház- és Filmművészeti Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI54876",
+        "Url": "https://host.sdakft.hu/szfehw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Testnevelési Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI89399",
+        "Url": "https://neptun.tf.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Tokaj-Hegyalja Egyetem",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI30164",
+        "Url": "https://neptun.unithe.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Tomori Pál Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI44196",
+        "Url": "https://host.sdakft.hu/tpfhw/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Veszprémi Érseki Foiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI34533",
+        "Url": "https://neptun.vhf.hu/hallgatoi/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Wekerle Sándor Üzleti Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI50782",
+        "Url": "https://neptun.wsuf.hu/hallgato/MobileService.svc"
+    },
+    {
+        "Languages": "HU,EN,DE",
+        "Name": "Wesley János Lelkészképző Főiskola",
+        "NeptunMobileServiceVersion": 0,
+        "OMCode": "FI62930",
+        "Url": "https://host.sdakft.hu/wjlfhw/MobileService.svc"
+    }
+]
