@@ -5,6 +5,14 @@ A dokumentáció rendszeres frissítés alatt van, ahogy haladok az endpointok t
 
 Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmazásból lett *kimókolva*.
 
+Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket megtalálod a repo-ban lévő GetInstitues.json-ból.
+
+A link így néz ki: <br>
+```https://<neptun-link>/<hallgato-api>/MobileService.msc/```
+
+Az endpoint-okat a linkek végére kell írni. A végeredmény:<br>
+```https://<neptun-link>/<hallgato-api>/MobileService.msc/GetMessages```
+
 Minden HTTP request-et POST-ként kell küldeni. Ha egyéb dolgot nem ír, akkor ezt a default query-t kell küldeni:
 
 ```
