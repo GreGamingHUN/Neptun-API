@@ -54,7 +54,7 @@ Itt az összes endpoint amit találtam:
 - **Name**: Küldő
 - **NeptunCode**: i have no idea, mindig üres string-et ad
 - **PersonMessageId**: i have no idea
-- **SendDate**: Üzenet küldési ideje epoch timestamp formátumban (konvertáláshoz link: https://www.epochconverter.com/)
+- **SendDate**: Üzenet küldési ideje epoch timestamp formátumban
 - **Subject**: Az üzenet témája/címe
 
 ## GetSentMessages
