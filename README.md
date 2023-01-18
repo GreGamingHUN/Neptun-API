@@ -178,7 +178,6 @@ Kurzus objektumokkal ad vissza a következő adattagokkal:
 - **RangsorPontszamok**: i have no idea, probably a rangosoros jelentkezésnél a helyezésed
 
 ## Dokumentálatlan endpoint-ok
-- GetCourses
 - GetSubjects
 - SaveSubject
 - GetExamDetails
