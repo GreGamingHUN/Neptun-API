@@ -48,6 +48,7 @@ Minden api call egy json-al tér vissza, az érdemleges információkat tartozó
 
 Itt az összes endpoint amit találtam:
 ## GetMessages
+Visszaadja az hallgató bejövő üzeneteit.
 - **Adattag**: MessagesList
 
 [//]: # (endoflist)
@@ -62,12 +63,14 @@ Itt az összes endpoint amit találtam:
 - **Subject**: Az üzenet témája/címe
 
 ## GetSentMessages
+Visszaadja a hallgató elküldött üzeneteit.
 - **Adattag**: MessagesList
 
 [//]: # (endoflist)
     Mivel életemben nem küldtem egy neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen, probalby ugyanaz, mint a GetMessages
 
 ## GetPeriodTerms
+Visszaadja a szemesztereket
 - **Adattag**: PeriodTermsList
 
 [//]: # (endoflist)
@@ -76,6 +79,7 @@ Itt az összes endpoint amit találtam:
 - **TermName**: A félév megnevezése
 
 ## GetPeriods
+Visszaadja az adott szemeszter időszakait
 - **Adattag**: PeriodList
 
 [//]: # (endoflist)
@@ -92,6 +96,7 @@ Időszak objektumokat ad vissza a következő adattagokkal:
 - **TrainingTermIntervalId**: i have no idea, valószínűleg szimplán az időszak id-je
 
 ## GetAddedSubjects
+Visszaadja a hallgató megadott félévben lévő felvett tárgyait
 - **Adattag**: AddedSubjectsList
 
 [//]: # (endoflist)
@@ -113,6 +118,7 @@ Tárgy objektumokat ad vissza a következő adattagokkal:
 - **TermId**: A félév id-je (fogalmam sincs miért adja vissza, amikor azt nekünk kellett megadni)
 
 ## GetExams
+Visszaadja az adott félév vizsgáit
 - **Adattag**: ExamsList
 
 [//]: # (endoflist)
@@ -144,6 +150,7 @@ Vizsga objektumokkal ad vissza a következő adattagokkal:
 - **ToDate**: Vizsga elkezdésének vége
 
 ## GetCurriculums
+Visszaadja a hallgató mintatanterveit
 - **Adattag**: CurriculumList
 
 [//]: # (endoflist)
@@ -152,18 +159,19 @@ Tanterv objektumokat ad vissza a következő adattagokkal:
 - **ID**: A mintatanterv id-je
 
 ## GetCourses
+Visszaadja a az adott tárgy kurzusait
 - **Adattag**: CourseList
 
 [//]: # (endoflist)
 Plusz adattagok amit a POST requesthez kell adni:
 - **filter**: Ezen belül kell a következő adattagokat berakni:
-- **Id**: Tantárgy id-je, amit a **GetAddedSubjects**-el tudsz lekérni
+- **Id**: Tantárgy id-je, amit a **GetSubjects**-el, vagy **GetAddedSubjects**-el tudsz lekérni
 - **SubjectType**: ```0```, Bármi mást írsz meghal az egész
 - **CurriculumID**: Mintatanterv id-je, amit a **GetCurriculums**-al tudsz lekérni
 - **TermID**: Szemeszter id-je, amit a **GetTermPeriods**-el tudsz lekérni
 
 [//]: # (endoflist)
-Kurzus objektumokkal ad vissza a következő adattagokkal:
+Kurzus objektumokat ad vissza a következő adattagokkal:
 - **CourseClass**: i have no idea, mindig ```null```
 - **CourseCode**: Kurzus kódja
 - **CourseTimeTableInfo**: Kurzus órarendi infói (pl.: ```"SZE:15:00-16:00(PL-169-3 - Pelda 169 PC-terem (IR-169-3))"```)
@@ -177,8 +185,38 @@ Kurzus objektumokkal ad vissza a következő adattagokkal:
 - **Letszamok**: Létszámok (Fő/Várólista/Limit)
 - **RangsorPontszamok**: i have no idea, probably a rangosoros jelentkezésnél a helyezésed
 
+## GetSubjects
+Visszaadja az adott félév tantárgyait
+- **Adattag**: SubjectList
+
+[//]: # (endoflist)
+Plusz adattagok amit a POST requesthez kell adni:
+- **filter**: Ezen belül kell a következő adattagokat berakni:
+- **CurriculumID**: Mintatanterv id-je (```0```, ha nem akarsz mintatantervet megadni)
+- **SubjectType**: i have no idea
+- **TermId**: félév id-je
+- **SubjectName**: ```null```, vagy a tárgy neve, amire keresni szeretnél (Úgy működik mint a Neptunos tárgykereső, ha félig írod be az is működik)
+- **SubjectCode**: ```null```, vagy a tárgy kódja amire keresni szeretnél (Úgy működik mint a Neptunos tárgykereső, ha félig írod be az is működik)
+- **CourseTutor**: ```null```, vagy az oktató akire keresni szeretnél (Úgy működik mint a Neptunos tárgykereső, ha félig írod be az is működik)
+- **CourseCode**: ```null```, vagy a kurzus kódja amire keresni szeretnél (Úgy működik mint a Neptunos tárgykereső, ha félig írod be az is működik)
+
+[//]: # (endoflist)
+Van egy kis quirkje a dolognak, ugyanis az eddig használatos ```"CurrentPage: 0"``` egy ```Index -10 is either negative or above rows count.``` errort ad, szóval a ```CurrentPage``` adattaggal kell lépegetni az "oldalakon", hogy ne haljon meg
+
+Tantárgy objektumokat ad vissza a következő adattagokkal:
+- **Completed**: Teljesítetted-e a tárgyat (```boolean```)
+- **Credit**: Hány kreditet ér a tárgy
+- **CurriculumTemplateID**: A tárgy mintatantervének id-je
+- **CurriculumTemplatelineID**: i have no idea
+- **IsOnSubject**: Jelenleg fel vagy-e jelentkezve a tárgyra
+- **SubjectCode**: A tárgy kódja
+- **SubjectId**: A tárgy id-je
+- **SubjectName**: A tárgy neve
+- **SubjectRequirement**: A tárgy követelménye(?),  (pl.: ```"Kollokvium", "Gyakorlati jegy"```)
+- **SubjectSignupType**: A tárgyfeliratkozás típusa (pl.: ```"Kötelező", "Kötelezően választható"```)
+- **TermID**:  A tárgy félévének id-je
+
 ## Dokumentálatlan endpoint-ok
-- GetSubjects
 - SaveSubject
 - GetExamDetails
 - GetTermData
