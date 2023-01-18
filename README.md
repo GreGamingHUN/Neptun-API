@@ -112,6 +112,37 @@ Tárgy objektumokat ad vissza a következő adattagokkal:
 - **SubjectType**: A tárgy típusa, pl ```"Kötelező", "Kötelezően választható", "Szabadon választható"```
 - **TermId**: A félév id-je (fogalmam sincs miért adja vissza, amikor azt nekünk kellett megadni)
 
+## GetExams
+- **Adattag**: ExamsList
+
+[//]: # (endoflist)
+Plusz adattagok amit a POST requesthez kell adni:
+- **filter**: Ezen belül kell a következő adattagokat berakni:
+
+[//]: # (endoflist)
+- **ExamType**: A vizsga típusa, ```0```, ha bármi más string-et akarok megadni meghal az egész, inkább kérj le mindent, majd a lekért adatokat szűrd saját kóddal
+- **Term**: Szemeszter, ```0```, ha az összes szemeszet vizsgáit le akarod kérni, egyébként pedig a **GetPeriodTerms**-el lekért szemeszter kódja (fun fact, a Neptun nem tárolja az előző félévek vizsgaidőpontjait, szóval kb mindig maradhat 0-n)
+- **SubjectID**: Tantrágy ID, ```0```, ha az összes tárgy vizsgáját le akarod kérni, egyébként pedig a **GetAddedSubjects**-el lekért tárgy kódja
+- **ExamStart**: Vizsga kezdési ideje, ```/Date(-62135596800000)/```, vagy a dátum, ahonnan nézve le akarod kérni a vizsgákat (pl. ```"Date(<A dátumod epoch formátumban>)"```)
+- **ExamTypeSpinner**: i have no idea mit jelent, ```0```
+- **IsFromSearch**: i have no idea, ```false```
+- **SubjectName**: Tárgy neve, viszont ide tök mindegy mit adok meg, mindent kidob. Ezt csak visszadobja majd a POST request
+- **CourseCode**: same
+- **KurzusOktato**: i have no idea, a POST request semmit sem ad vissza ezzel kapcsolatban, akármit is adok meg
+
+[//]: # (endoflist)
+Vizsga objektumokkal ad vissza a következő adattagokkal:
+- **CourseCode**: Kurzus kódja
+- **CourseExam_ExamSigninID**: i have no idea
+- **CourseID**: Kurzus id-je
+- **ExamType**: Vizsga típusa (pl.: ```"CooSpace-es teszt", "Írásbeli"```)
+- **FromDate**: A vizsga kezdésének ideje
+- **SignedIn**: i have no idea, mindig **null**
+- **SubjectCode**: Tárgy kódja
+- **SubjectID**: tárgy id-je
+- **SubjectName**: tárgy neve
+- **ToDate**: Vizsga elkezdésének vége
+
 ## Dokumentálatlan endpoint-ok
 - GetPartners
 - RemovePartners
@@ -132,7 +163,6 @@ Tárgy objektumokat ad vissza a következő adattagokkal:
 - GetSubjects
 - GetMarkbookData
 - GetTrainings
-- GetExams
 - GetExamDetails
 - RemoveExam
 - SetExamSigning
