@@ -9,7 +9,7 @@ Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmaz�
 
 - A projekt elkezdésében sokat segített **@RuzsaGergely** valamint a **Poszeidon** proxy-ja: https://github.com/RuzsaGergely/Poszeidon (thanks pal)
 
-Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket egyelőre megtalálod a repo-ban lévő GetInstitues.json-ból.
+Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket egyelőre megtalálod a repo-ban lévő [GetInstitues.json](https://github.com/GreGamingHUN/Neptun-API/blob/main/GetInstitutes.json)-ból.
 
 A link így néz ki: <br>
 ```https://<neptun-link>/<hallgato-api>/MobileService.msc/```
@@ -143,7 +143,52 @@ Vizsga objektumokkal ad vissza a következő adattagokkal:
 - **SubjectName**: tárgy neve
 - **ToDate**: Vizsga elkezdésének vége
 
+## GetCurriculums
+- **Adattag**: CurriculumList
+
+[//]: # (endoflist)
+Tanterv objektumokat ad vissza a következő adattagokkal:
+- **CurriculumName**: A mintatanterv neve
+- **ID**: A mintatanterv id-je
+
+## GetCourses
+- **Adattag**: CourseList
+
+[//]: # (endoflist)
+Plusz adattagok amit a POST requesthez kell adni:
+- **filter**: Ezen belül kell a következő adattagokat berakni:
+- **Id**: Tantárgy id-je, amit a **GetAddedSubjects**-el tudsz lekérni
+- **SubjectType**: ```0```, Bármi mást írsz meghal az egész
+- **CurriculumID**: Mintatanterv id-je, amit a **GetCurriculums**-al tudsz lekérni
+- **TermID**: Szemeszter id-je, amit a **GetTermPeriods**-el tudsz lekérni
+
+[//]: # (endoflist)
+Kurzus objektumokkal ad vissza a következő adattagokkal:
+- **CourseClass**: i have no idea, mindig ```null```
+- **CourseCode**: Kurzus kódja
+- **CourseTimeTableInfo**: Kurzus órarendi infói (pl.: ```"SZE:15:00-16:00(PL-169-3 - Pelda 169 PC-terem (IR-169-3))"```)
+- **CourseTutor**: Kurzust tartó neve
+- **CourseType**: kurzus típus id-je (?)
+- **CourseType_DNAME**: kurzus típus neve
+- **Id**: Kurzus id-je
+- **IsJovahagyasos**: Jóváhagyásos-e a kurzus (```boolean```)
+- **IsRangosoros**: Rangsoros-e a kurzus (```boolean```)
+- **IsVarolistas**: Várólistás-e a kurzus (```boolean```)
+- **Letszamok**: Létszámok (Fő/Várólista/Limit)
+- **RangsorPontszamok**: i have no idea, probably a rangosoros jelentkezésnél a helyezésed
+
 ## Dokumentálatlan endpoint-ok
+- GetCourses
+- GetSubjects
+- SaveSubject
+- GetExamDetails
+- GetTermData
+- RemoveMessage
+- SetReadedMessage
+- SetNewPassword
+- GetTrainings
+- GetCalendarData
+
 - GetPartners
 - RemovePartners
 - GetDirectoryGroups
@@ -155,23 +200,14 @@ Vizsga objektumokkal ad vissza a következő adattagokkal:
 - AddToFavouriteFourm
 - RemoveFromFavouriteForum
 - AddNewForumPost
-- GetCalendarData
 - GetCashinData
-- RemoveMessage
 - RemoveSentMessage
 - SendMessage
-- GetSubjects
 - GetMarkbookData
-- GetTrainings
-- GetExamDetails
 - RemoveExam
 - SetExamSigning
 - SetTrainings
 - GetOrganizations
-- SetReadedMessage
-- GetCourses
-- GetCurriculums
-- SaveSubject
 - DoCashinData
 - CheckCashinData
 - ImpositionGetAllowedPaymentTypes
@@ -189,8 +225,6 @@ Vizsga objektumokkal ad vissza a következő adattagokkal:
 - GetMeetingEventDetails
 - GetRegisterListEventDetails
 - GetFilesToDocument
-- SetNewPassword
-- GetTermData
 - GetMarkbookTermData
 - GetGDPRInfo
 - SetGDPRAcceptance
