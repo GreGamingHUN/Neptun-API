@@ -5,8 +5,7 @@ A dokumentáció rendszeres frissítés alatt van, ahogy haladok az endpointok t
 
 Néha ha valamivel haladok Twitterre kiposztolom, ha érdekel ahogy szenvedek check it out: https://twitter.com/GreG_Coding
 
-Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmazásból lett *kimókolva*.
-
+Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmazásból lett *kimókolva*, emiatt a használatáért valamint annak következményeiért felelősséget nem vállalok
 - A projekt elkezdésében sokat segített **@RuzsaGergely** valamint a **Poszeidon** proxy-ja: https://github.com/RuzsaGergely/Poszeidon (thanks pal)
 
 Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket egyelőre megtalálod a repo-ban lévő [GetInstitues.json](https://github.com/GreGamingHUN/Neptun-API/blob/main/GetInstitutes.json)-ból.
