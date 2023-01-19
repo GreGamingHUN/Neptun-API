@@ -216,6 +216,16 @@ Tantárgy objektumokat ad vissza a következő adattagokkal:
 - **SubjectSignupType**: A tárgyfeliratkozás típusa (pl.: ```"Kötelező", "Kötelezően választható"```)
 - **TermID**:  A tárgy félévének id-je
 
+## GetTrainings
+Visszaadja a hallgató képzéseit
+- **Adattag**: TrainingList
+
+[//]: # (endoflist)
+Képzés objektumokat ad vissza a következő adattagokkal:
+- **Code**: A képzés kódja
+- **Description**: A képzés megnevezése
+- **Id**: A képzés id-je
+
 ## Dokumentálatlan endpoint-ok
 - SaveSubject
 - GetExamDetails
@@ -223,7 +233,6 @@ Tantárgy objektumokat ad vissza a következő adattagokkal:
 - RemoveMessage
 - SetReadedMessage
 - SetNewPassword
-- GetTrainings
 - GetCalendarData
 
 - GetPartners
