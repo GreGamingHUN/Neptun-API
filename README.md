@@ -226,14 +226,53 @@ Képzés objektumokat ad vissza a következő adattagokkal:
 - **Description**: A képzés megnevezése
 - **Id**: A képzés id-je
 
+## GetCalendarData
+Visszaadja a hallgató naptárban lévő eseményeit
+- **Adattag**: calendarData
+ 
+[//]: # (endoflist)
+Plusz adattagok amit a POST requesthez kell adni:
+- **needAllDaylong**: i have no idea (```boolean```, legyen ```true```)
+- **Time**: i have no idea (```boolean```, legyen ```true```)
+- **Exam**: Kilistázza-e a vizsgákat (```boolean```)
+- **Task**: Kilistázza-e a teendőket (?) (```boolean```)
+- **Apointment**: Kilistázza-e az egyeztetett időpntokat (?) (```boolean```, legyen ```true```)
+- **RegisterList**: i have no idea (```boolean```, legyen ```true```)
+- **Consultation**: i have no idea (```boolean```, legyen ```true```)
+- **startDate**: Milyen dátumtól nézze az eseményeket (pl.: ```"/Date(1674136168)/"```, ahol a szám epoch formátumban van)
+- **endDate**: Meddig nézze az eseményeket (pl.: ```"/Date(1674136168)/"```, ahol a szám epoch formátumban van)
+- **entityLimit**: i have no idea (```int```, legyen ```0```)
+
+[//]: # (endoflist)
+Naptáradat objektumokat ad vissza a következő adattagokkal:
+- **allDayLong**: i have no idea, nekem mindig ```false```
+- **description**: az esemény leírása
+- **end**: Meddig tart az esemény epoch formátumban
+- **eventColor**: esemény színe a naptárban (```{ a: 255, b:45, g: 125, r: 0 }``` formátumban)
+- **id**: Esemény id-je
+- **location**: Esemény helye
+- **start**: Esemény kezdete epoch formátumban
+- **title**: Esemény címe
+- **type**: i have no idea
+
+## SetReadedMessage
+A megadott üzenetet olvasottá teszi
+- **Adattag**: nincs
+
+[//]: # (endoflist)
+Plusz adattagok amit a POST requesthez kell adni:
+- **PersonMessageId**: Az üzenet id-je, amit a **GetMessages**-el tudsz lekérni
+
 ## Dokumentálatlan endpoint-ok
+### Priority:
 - SaveSubject
 - GetExamDetails
 - GetTermData
 - RemoveMessage
-- SetReadedMessage
 - SetNewPassword
-- GetCalendarData
+
+
+### Egyéb:
 
 - GetPartners
 - RemovePartners
