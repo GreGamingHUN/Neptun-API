@@ -8,7 +8,7 @@ Néha ha valamivel haladok Twitterre kiposztolom, ha érdekel ahogy szenvedek ch
 Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmazásból lett *kimókolva*, emiatt a használatáért valamint annak következményeiért felelősséget nem vállalok
 - A projekt elkezdésében sokat segített **@RuzsaGergely** valamint a **Poszeidon** proxy-ja: https://github.com/RuzsaGergely/Poszeidon (thanks pal)
 
-Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket egyelőre megtalálod a repo-ban lévő [GetInstitues.json](https://github.com/GreGamingHUN/Neptun-API/blob/main/Institutes.json)-ból.
+Az egyetemek linkjeihez is lesz itt egy link amire POST requestet kell küldeni, viszont mivel az SSL tanúsítványa lejárt ezért vicces. Az egyetemedhez megfelelő linket egyelőre megtalálod a repo-ban lévő [Institues.json](https://github.com/GreGamingHUN/Neptun-API/blob/main/Institutes.json)-ból.
 
 A link így néz ki: <br>
 ```https://<neptun-link>/<hallgato-api>/MobileService.msc/```
@@ -20,62 +20,133 @@ Minden HTTP request-et POST-ként kell küldeni. Ha egyéb dolgot nem ír, akkor
 
 ```json
 {
-    "TotalRowCount": -1,
-    "ExceptionsEnum": 0,
     "UserLogin": "dummy",
     "Password": "dummypwd",
-    "NeptunCode": "",
     "CurrentPage": 0,
-    "StudentTrainingID": null,
     "LCID": 1038,
-    "ErrorMessage": "",
-    "MobileVersion": "1.5"
 }
 ```
 Jelentésuk:
-- **TotalRowCount**: i have no idea
-- **ExceptionsEnum**: i have no idea
 - **UserLogin**: Neptunkód
 - **Password**: Neptunos jelszó
-- **CurrentPage**: Ha több oldalas a lekérés, actually még nem tudtam hol használni
-- **StudentTrainingID**: i have no idea
+- **CurrentPage**: Ha több oldalas a lekérés
 - **LCID**: nyelvkód, az 1038 a magyar
-- **ErrorMessage**: Ha hiba van ide adja vissza, hogy nekem ide miért kell küldenem bármit is azt nem tudom
-- **MobileVersion**: A mobil alkalmazás verziója, i guess ha frissül a mobil app akk át kell írni
 
-Minden api call egy json-al tér vissza, az érdemleges információkat tartozó adattagokat odaírom az endpointok dokumentációihoz
+Minden api call egy json-al tér vissza, ami így néz ki a GetMessages esetén:
+```json
+{
+    "CurrentPage": 0,
+    "ErrorMessage": null,
+    "ExceptionData": null,
+    "ExceptionsEnum": 0,
+    "LCID": 1038,
+    "MobileServiceVersion": 5,
+    "MobileVersion": null,
+    "NeptunCode": "dummy",
+    "Password": "dummypwd",
+    "StudentTrainingID": null,
+    "TotalRowCount": 458,
+    "UserLogin": "dummy",
+    "MessagesList": [...]
+}
+```
+A különböző lekérdezéseknél mindig a MessagesList helyett lesz az "érdekes" adat (pl: SubjectsList, PeriodTermsList, stb.), ezeknek az adattagoknak a nevét minden endpoint dokumentációjánál oda lesz írva
+
+
 
 Itt az összes endpoint amit találtam:
 ## GetMessages
-Visszaadja az hallgató bejövő üzeneteit.
-- **Adattag**: MessagesList
-
+Visszaadja az hallgató bejövő üzeneteit:
+```json
+{
+    "MessagesList": [...],
+    "NewMessagesNumber": "Int, olvasatlan üzenetek száma"
+}
+```
 [//]: # (endoflist)
-    Üzenet objektumokat ad vissza a következő adattagokkal:
-- **Detail**: Az üzenet tartalma
-- **Id**: Az üzenet id-je
-- **IsNew**: i have no idea
-- **Name**: Küldő
-- **NeptunCode**: i have no idea, mindig üres stringet ad
-- **PersonMessageId**: i have no idea
-- **SendDate**: Üzenet küldési ideje epoch timestamp formátumban
-- **Subject**: Az üzenet témája/címe
+    A ```MessagesList```  Üzenet objektumokat tartalmaz a következő adattagokkal:
+```json
+{
+    "Detail": "String, az üzenet tartalma",
+    "Id": "Int, az üzenet id-je",
+    "IsNew": "Boolean, új-e, (olvasatlan) az üzenet",
+    "Name": "String, az üzenet feladója",
+    "NeptunCode": "String, a küldő Neptun kódja",
+    "PersonMessageId": "Int, i have no idea",
+    "SendDate": "String, küldés ideje Epoch Unix formátumban",
+    "Subject": "String, az üzenet tárgya"
+}
+```
+[//]: # (endoflist)
+Példa response:
+
+```json
+{
+    "MessagesList": [
+        {
+            "Detail": "Tisztelt hallgató! Önnek vizsgajegyet írtak be.",
+            "Id": 7346724312,
+            "IsNew": true,
+            "Name": "Neptun üzemeltetés",
+            "NeptunCode": "HDEIXS",
+            "PersonMessageId": 636950383,
+            "SendDate": "/Date(1676912670000)/",
+            "Subject": "Vizsgajegy beírás történt!"
+        },
+        {
+            "Detail": "Tisztelt hallgató! Önnek megajánlott jegyet írtak be.",
+            "Id": 7334924312,
+            "IsNew": false,
+            "Name": "Neptun üzemeltetés",
+            "NeptunCode": "HDEIXS",
+            "PersonMessageId": 636950013,
+            "SendDate": "/Date(1676945670000)/",
+            "Subject": "Megajánlott jegy beírás történt!"
+        }
+    ],
+    "NewMessagesNumber": 233
+}
+```
 
 ## GetSentMessages
 Visszaadja a hallgató elküldött üzeneteit.
 - **Adattag**: MessagesList
 
 [//]: # (endoflist)
-    Mivel életemben nem küldtem egy neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen, probalby ugyanaz, mint a GetMessages
+    Mivel életemben nem küldtem egy neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen, probably ugyanaz, mint a GetMessages
 
 ## GetPeriodTerms
-Visszaadja a szemesztereket
-- **Adattag**: PeriodTermsList
+Visszaadja a hallgató féléveit:
+```json
+{
+    "PeriodTermsList": [...]
+}
+```
 
 [//]: # (endoflist)
-    Szemeszter objektumokat ad vissza a következő adattagokkal:
-- **Id**: A félév id-je
-- **TermName**: A félév megnevezése
+    A ```PeriodTermsList``` Félév objektumokat ad vissza a következő adattagokkal:
+```json
+{
+    "Id": "Int, a félév id-je",
+    "TermName": "String, a félév megnevezése"
+}
+```
+[//]: # (endoflist)
+Példa response:
+```json
+{
+    "PeriodTermsList": [
+        {
+            "Id": 70626,
+            "TermName": "2022/23/2"
+        },
+        {
+            "Id": 70627,
+            "TermName": "2022/23/2"
+        }
+    ]
+}
+```
 
 ## GetPeriods
 Visszaadja az adott szemeszter időszakait
