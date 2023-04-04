@@ -110,10 +110,16 @@ Példa response:
 
 ## GetSentMessages
 Visszaadja a hallgató elküldött üzeneteit.
-- **Adattag**: MessagesList
+```json
+{
+    "MessagesList": [...]
+}
+```
+
+A `MessagesList` Üzenet objektumokat ad vissza (lásd `GetMessages`).
 
 [//]: # (endoflist)
-    Mivel életemben nem küldtem egy neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen, probably ugyanaz, mint a GetMessages
+    Mivel életemben nem küldtem egy Neptunos üzenetet sem, így ezt nem tudom dokumentálni rendesen, probably ugyanaz, mint a GetMessages
 
 ## GetPeriodTerms
 Visszaadja a hallgató féléveit:
@@ -150,20 +156,62 @@ Példa response:
 
 ## GetPeriods
 Visszaadja az adott szemeszter időszakait
-- **Adattag**: PeriodList
+```json
+{
+    "PeriodList": [...]
+}
+```
 
+Ehhez a lekérdezéshez ezeket a plusz adattagokat kell küldeni a POST request során:
+```json
+{
+    "PeriodTermID": "Int, a félév id-je, amit `GetPeriodTerms` lekérdezéssel kaphatsz meg"
+}
+```
+
+Példa request:
+```json
+{
+    "UserLogin": "TESZT1",
+    "Password": "Jelszo123",
+    "CurrentPage": 0,
+    "LCID": 1038,
+    "PeriodTermID": 70627
+}
+```
 [//]: # (endoflist)
-Plusz adattag amit a POST requesthez kell adni:
-- **PeriodTermID**: A szemeszter id-je, amit a **GetPeriodTerms** segítségével kérhetsz le
-
-
-[//]: # (endoflist)
-Időszak objektumokat ad vissza a következő adattagokkal:
-- **FromDate**: Mikortól kezdődik az időszak
-- **OrgAdmins**: i have no idea, mindig öres stringet ad
-- **PeriodName**: Időszak neve
-- **ToDate**: Meddig tart az időszak
-- **TrainingTermIntervalId**: i have no idea, valószínűleg szimplán az időszak id-je
+A `PeriodList` Időszak objektumokat ad vissza a következő adattagokkal:
+```json
+{
+    "FromDate": "String, az időszak kezdési ideje Epoch Unix formátumban",
+    "OrgAdmins": "String, az eseményt szervező neve",
+    "PeriodName": "String, az időszak neve",
+    "PeriodTypeName": "String, az időszak típusa",
+    "ToDate": "String, időszak végének ideje Epoch Unix formátumban",
+    "TrainingTermIntervalId": "Int, i have no idea, valami id"
+}
+```
+Példa response:
+```json
+    "PeriodList": [
+        {
+            "FromDate": "/Date(1675195200000)/",
+            "OrgAdmins": "Corvinus Egyetem",
+            "PeriodName": "Kurzusjelentkezés",
+            "PeriodTypeName": "Kurzusjelentkezési időszak",
+            "ToDate": "/Date(1675195200000)/",
+            "TrainingTermIntervalId": 54765387
+        },
+        {
+            "FromDate": "/Date(1675595200000)/",
+            "OrgAdmins": "ÁJTK",
+            "PeriodName": "Tárgyjelentkezés",
+            "PeriodTypeName": "Végleges tárgyjelentkezés",
+            "ToDate": "/Date(1675695200000)/",
+            "TrainingTermIntervalId": 82565387
+        }
+    ]
+```
 
 ## GetAddedSubjects
 Visszaadja a hallgató megadott félévben lévő felvett tárgyait
