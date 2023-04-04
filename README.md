@@ -1,7 +1,7 @@
 # Neptun-API
 A Neptun Egyetemi Rendszer API dokumentációja
 
-A dokumentáció rendszeres frissítés alatt van, ahogy haladok az endpointok tesztelésében úgy frissítem.
+A dokumentáció jelenleg átdolgozás alatt van, hogy könnyebben megérthető legyen, emiatt a kinézete nem egységes.
 
 Néha ha valamivel haladok Twitterre kiposztolom, ha érdekel ahogy szenvedek check it out: https://twitter.com/GreG_Coding
 
