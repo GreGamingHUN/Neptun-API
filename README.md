@@ -244,7 +244,7 @@ Az `AddedSubjectsList` tárgy objektumokat ad vissza a következő adattagokkal:
 ```json
 {
     "Courses": "Egy tömb, amiben a tárgy kurzusainak adatai találhatóak",
-    "CurriculumTemplateID: "A mintatanterv id-je, amiben benne van",
+    "CurriculumTemplateID": "A mintatanterv id-je, amiben benne van",
     "SubjectCode": "A tárgy kódja",
     "SubjectComplianceResult": "A tárgy eredménye. Ha nincs jegy, akkor üres String, ha van, akkor pl.: 'Jó (4)', 'Jeles (5)'",
     "SubjectComplianceResultType": "I have no idea",
