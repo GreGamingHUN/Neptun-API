@@ -215,25 +215,78 @@ Példa response:
 
 ## GetAddedSubjects
 Visszaadja a hallgató megadott félévben lévő felvett tárgyait
-- **Adattag**: AddedSubjectsList
+```json
+{
+    "AddedSubjectsList": [...]
+}
+```
 
-[//]: # (endoflist)
-Plusz adattag amit a POST requesthez kell adni:
-- **TermId**: A szemeszter id-je, amit a **GetPeriodTerms** segítségével kérhetsz le
+Ehhez a lekérdezéshez ezeket a plusz adattagokat kell küldeni a POST request során:
 
-[//]: # (endoflist)
-Tárgy objektumokat ad vissza a következő adattagokkal:
-- **Courses**: Egy tömb, amiben a kurzusok adatai találhatók, még nem tudom hogyan kell használni
-- **CurriculumtemplateID**: A tanterv id-je, amiben benne van
-- **SubjectCode**: A tárgy kódja
-- **SubjectComplianceResult**: A tárgy eredménye. Üres string, ha nincs jegy, ha akkor string, pl: ```"Jó (4)", "Közepes (3)"``` 
-- **SubjectComplianceResultType**: i have no idea
-- **SubjectCredit**: A tárgy kreditértéke
-- **SubjectID**: A tárgy id-je
-- **SubjectName**: A tárgy neve
-- **SubjectRequirement**: A tárgy követelménye(?), pl ```"Kollokvium", "Gyakorlati jegy"```
-- **SubjectType**: A tárgy típusa, pl ```"Kötelező", "Kötelezően választható", "Szabadon választható"```
-- **TermId**: A félév id-je (fogalmam sincs miért adja vissza, amikor azt nekünk kellett megadni)
+```json
+{
+    "TermId": "Int, a félév id-je, amit `GetPeriodTerms` lekérdezéssel kaphatsz meg"
+}
+```
+
+Példa request:
+```json
+{
+    "UserLogin": "TESZT1",
+    "Password": "Jelszo123",
+    "CurrentPage": 0,
+    "LCID": 1038,
+    "TermId": 70627
+}
+```
+
+Az `AddedSubjectsList` tárgy objektumokat ad vissza a következő adattagokkal:
+```json
+{
+    "Courses": "Egy tömb, amiben a tárgy kurzusainak adatai találhatóak",
+    "CurriculumTemplateID: "A mintatanterv id-je, amiben benne van",
+    "SubjectCode": "A tárgy kódja",
+    "SubjectComplianceResult": "A tárgy eredménye. Ha nincs jegy, akkor üres String, ha van, akkor pl.: 'Jó (4)', 'Jeles (5)'",
+    "SubjectComplianceResultType": "I have no idea",
+    "SubjectCredit": "A tárgy kreditértéke",
+    "SubjectID": "A tárgy id-je",
+    "SubjectName": "A tárgy neve",
+    "SubjectRequirement": "A tárgy teljesítésének követelménye, pl.: 'Kollokvium', 'Gyakorlai jegy'",
+    "SubjectType": "A tárgy típusa, pl.: 'Kötelező', 'Kötelezően választható', 'Szabadon választható'",
+    "TermId": "A félév id-je (fogalmam sincs miért adja vissza, amikor azt nekünk kellett megadni)"
+}
+```
+Példa response:
+```json
+"AddedSubjectsList": [
+    {
+        "Courses": [Array],
+        "CurriculumTemplateID": 67273028,
+        "SubjectCode": "I2343l",
+        "SubjectComplianceResult": "Jeles (5)",
+        "SubjectComplianceResultType": '24014',
+        "SubjectCredit": 2,
+        "SubjectID": 123445654,
+        "SubjectName": "Programozás II.",
+        "SubjectRequirement": "Kollokvium",
+        "Subjecttype": "Kötelezően választható",
+        "TermId": 70623
+    },
+    {
+        "Courses": [Array],
+        "CurriculumTemplateID": 67273028,
+        "SubjectCode": "I2343G",
+        "SubjectComplianceResult": "Jeles (4)",
+        "SubjectComplianceResultType": '24014',
+        "SubjectCredit": 3,
+        "SubjectID": 123445658,
+        "SubjectName": "Programozás II.",
+        "SubjectRequirement": "Gyakorlati jegy",
+        "Subjecttype": "Kötelezően választható",
+        "TermId": 70623
+    }
+]
+```
 
 ## GetExams
 Visszaadja az adott félév vizsgáit
