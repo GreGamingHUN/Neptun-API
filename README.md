@@ -485,6 +485,10 @@ Plusz adattagok amit a POST requesthez kell adni:
 - GetGDPRInfo
 - SetGDPRAcceptance
 
+
+## Notes:
+Naptár eseményeknél az időpontok el vannak tolva 1 órával. Hogy miért? Azért, mert a Neptun a megfelelő időt GMT-hez igazítva adja meg, mi pedig (téli időszámítás szerint) GMT+1 időzónát használunk (smh), emiatt ha a lekért időt igazítod a saját időzónádhoz (ha az a magyar nyílván) akkor 1 (nyáron 2) órával későbbi időpontot kapsz. Quick fix hogy kivonsz az időből 1 órát, de ezt időzóna váltáskor újra meg kell csinálni.
+
 A jelentésüket valamint használatukat folyamatosan frissíteni fogom ahogy haladok velük
 
 k thanks bye
