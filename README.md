@@ -5,6 +5,8 @@ A dokumentáció jelenleg átdolgozás alatt van, hogy könnyebben megérthető 
 
 Néha ha valamivel haladok Twitterre kiposztolom, ha érdekel ahogy szenvedek check it out: https://twitter.com/GreG_Coding
 
+Egy proof-of-concept Neptun app [itt](https://github.com/GreGamingHUN/neptun_plus_flutter) készül, viszont csak az SZTE-vel van tesztelve.
+
 Az endpoint-ok (és tbh minden ami itt található) a Neptun Androidos alkalmazásból lett *kimókolva*, emiatt a használatáért valamint annak következményeiért felelősséget nem vállalok
 - A projekt elkezdésében sokat segített **@RuzsaGergely** valamint a **Poszeidon** proxy-ja: https://github.com/RuzsaGergely/Poszeidon (thanks pal)
 
