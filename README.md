@@ -1,6 +1,8 @@
 # Neptun-API
 A Neptun Egyetemi Rendszer API dokumentációja
 
+## DEPRECATED - Ez a dokumentáció a facelift előtti API-ra vonatkozott, a facelift alatt pedig látszólag a backend-et is szinte teljesen lecserélték.
+
 A dokumentáció jelenleg átdolgozás alatt van, hogy könnyebben megérthető legyen, emiatt a kinézete nem egységes.
 
 Néha ha valamivel haladok Twitterre kiposztolom, ha érdekel ahogy szenvedek check it out: https://twitter.com/GreG_Coding
